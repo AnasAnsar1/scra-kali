@@ -10,7 +10,7 @@ spec:
   ports:
     - name: db-port
       targetPort: 3306
-      port: 80
+      port: 8080
       protocol: TCP
   selector:
     db: std-db
