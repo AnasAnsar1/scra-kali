@@ -15,4 +15,5 @@ replicas:
 images:
   - name: anasansarii/scra
     newName: anasansarii/scra
+    newTag: dev-4
 
