@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sra
+  labels:
+    version: dev
+    app: sra
+  namespace: dev
+spec:
+  minReadySeconds: 5
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sra
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
+  template:
+    metadata:
+      name: sra
+      labels:
+        app: sra
+        version: dev
+      namespace: dev
+    spec:
+      containers:
+        - name: sra
+          image: anasansarii/scra
+          ports:
+            - name: sraport
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: MYSQL_SERVER
+              value: db-svc
+          livenessProbe:
+            tcpSocket:
+              port: 8080
+          readinessProbe:
+            tcpSocket:
+              port: 8080
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
