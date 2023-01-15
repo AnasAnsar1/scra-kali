@@ -38,10 +38,10 @@ spec:
               value: db-svc
           livenessProbe:
             tcpSocket:
-              port: 8080
+              port: 33000
           readinessProbe:
             tcpSocket:
-              port: 8080
+              port: 33000
           resources:
             limits:
               memory: "128Mi"
