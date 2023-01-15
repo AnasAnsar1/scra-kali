@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - ../../base
 namespace: dev
-namePrefix: dev
+namePrefix: dev-
 labels:
   - pairs:
       version: dev

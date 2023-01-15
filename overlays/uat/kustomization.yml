@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+namespace: uat
+namePrefix: uat-
+labels:
+  - pairs:
+      version: uat
+    includeTemplates: true
+replicas:
+- name: sra
+  count: 3
+images:
+  - name: anasansarii/scra
+    newName: anasansarii/scra
