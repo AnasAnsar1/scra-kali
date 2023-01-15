@@ -10,6 +10,6 @@ spec:
   ports:
     - name: sra-port
       targetPort: 8080
-      port: 33000
+      port: 80
   selector:
     app: sra

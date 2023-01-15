@@ -37,11 +37,13 @@ spec:
             - name: MYSQL_SERVER
               value: db-svc
           livenessProbe:
-            tcpSocket:
-              port: sra-svc
+            httpGet:
+              host: sra-svc
+              port: 80
           readinessProbe:
-            tcpSocket:
-              port: sra-svc
+            httpGet:
+              host: sra-svc
+              port: 80
           resources:
             limits:
               memory: "128Mi"
