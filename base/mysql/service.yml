@@ -9,8 +9,7 @@ spec:
   type: ClusterIP
   ports:
     - name: db-port
-      targetPort: 3306
-      port: 8080
+      port: 3306
       protocol: TCP
   selector:
     db: std-db
