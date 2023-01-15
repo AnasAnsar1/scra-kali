@@ -11,7 +11,7 @@ labels:
     includeTemplates: true
 replicas:
 - name: sra
-  count: 3
+  count: 4
 images:
   - name: anasansarii/scra
     newName: anasansarii/scra
