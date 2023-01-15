@@ -35,7 +35,7 @@ spec:
               protocol: TCP
           env:
             - name: MYSQL_SERVER
-              value: db-svc
+              value: internal-db-svc
           livenessProbe:
             httpGet:
               path: /
