@@ -7,7 +7,7 @@ namespace: uat
 namePrefix: uat-
 labels:
   - pairs:
-      version: uat
+      env: uat
     includeTemplates: true
 replicas:
 - name: sra

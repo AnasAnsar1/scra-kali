@@ -7,7 +7,7 @@ namespace: qa
 namePrefix: qa-
 labels:
   - pairs:
-      version: qa
+      env: qa
     includeTemplates: true
 replicas:
 - name: sra

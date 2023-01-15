@@ -7,7 +7,7 @@ namespace: prod
 namePrefix: prod-
 labels:
   - pairs:
-      version: prod
+      env: prod
     includeTemplates: true
 replicas:
 - name: sra

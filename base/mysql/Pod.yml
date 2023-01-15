@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   name: std-db
   labels:
-    version: dev
+    env: dev
     db: std-db
   namespace: dev
 spec:

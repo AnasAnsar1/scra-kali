@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: sra
   labels:
-    version: dev
+    env: dev
     app: sra
   namespace: dev
 spec:
@@ -23,7 +23,7 @@ spec:
       name: sra
       labels:
         app: sra
-        version: dev
+        env: dev
       namespace: dev
     spec:
       containers:
@@ -35,7 +35,7 @@ spec:
               protocol: TCP
           env:
             - name: MYSQL_SERVER
-              value: internal-db-svc
+              value: db-svc
           livenessProbe:
             httpGet:
               path: /

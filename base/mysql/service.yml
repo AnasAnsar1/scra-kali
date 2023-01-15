@@ -1,11 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: internal-db-svc
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+  name: db-svc
 spec:
-  type: LoadBalancer
   ports:
   - port: 3306
   selector:

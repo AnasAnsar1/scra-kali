@@ -7,7 +7,7 @@ namespace: dev
 namePrefix: dev-
 labels:
   - pairs:
-      version: dev
+      env: dev
     includeTemplates: true
 replicas:
 - name: sra

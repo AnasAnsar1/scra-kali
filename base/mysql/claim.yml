@@ -4,7 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: dbclaim
   labels:
-    version: dev
+    env: dev
   namespace: dev
 spec:
   accessModes:
