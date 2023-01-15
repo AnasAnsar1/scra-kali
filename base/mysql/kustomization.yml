@@ -5,3 +5,4 @@ resources:
   - claim.yml
   - Pod.yml
   - service.yml
+  - ingress.yml
