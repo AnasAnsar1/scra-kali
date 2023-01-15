@@ -38,11 +38,9 @@ spec:
               value: db-svc
           livenessProbe:
             httpGet:
-              host: sra-svc
               port: 80
           readinessProbe:
             httpGet:
-              host: sra-svc
               port: 80
           resources:
             limits:
